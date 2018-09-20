@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="~/Images/favicon.ico">
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="~/Content/Admin/animate.css" rel="stylesheet" type="text/css" media="all">
+    <link href="~/Content/Admin/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/Admin/animate.css" rel="stylesheet" type="text/css" media="all" />
+   
+    <link href="~/Content/Admin/font-awesome.css" rel="stylesheet" />
+    <link href="~/Content/Admin/style.css" rel="stylesheet" />
+    <!-- js-->
+    <script src="~/Scripts/Admin/jquery-1.11.1.min.js"></script>
+    <script src="~/Scripts/Admin/custom.js"></script>
+    <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <script src="~/Scripts/Admin/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <script src="~/Scripts/Admin/Chart.js"></script>
+    <link rel="stylesheet" href="~/Content/Admin/clmdr.css" type="text/css" />
+    <script src="~/Scripts/Admin/underscore-min.js"></script>
+    <script src="~/Scripts/Admin/moment-2.2.1.js"></script>
+    <script src="~/Scripts/Admin/clndr.js"></script>
+    <script src="~/Scripts/Admin/site.js"></script>
+    <script src="~/Scripts/Admin/metisMenu.min.js"></script>
+    <script src="~/Scripts/Admin/custom.js"></script>
+    <link href="~/Content/Admin/custom.css" rel="stylesheet">
+
+</head>
+<body  class="cbp-spmenu-push">
+    @RenderBody()
+    <div class="main-content"> </div>
+        <!--left-fixed -navigation-->
+        <div class=" sidebar" role="navigation">
+            <div class="navbar-collapse">
+                <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+                    <ul class="nav" id="side-menu">
+                        <li>
+                            <a href="Index" class="active">Trang Chủ</a>
+                        </li>
+                        <li>
+                            <a href="bannang" class="active">Bàn Nâng</a>
+                     
+          
+                        </li>
+                        <li class="">
+                            <a href="#">Quản Lý Thẻ</a>
+                            <ul class="nav nav-second-level collapse">
+                                <li>
+                                    <a href="cauhinh">Cấu Hình</a>
+                                </li>
+                                <li>
+                                    <a href="quanlytaikhoan">Quản Lý Tài Khoản</a>
+                                </li>
+                                <li>
+                                    <a href="nhaplieu">Nhập Liệu</a>
+                                </li>
+                                <li>
+                                    <a href="trogiup">Trợ Giúp</a>
+                                </li>
+                          </ul> 
+                        </li>
+                        </ul>
+                    <!-- //sidebar-collapse -->
+                </nav>
+            </div>
+        </div>
+        <!-- header-starts -->
+                <div class="sticky-header header-section ">
+                    <div class="header-left">
+                        <!--logo -->
+                        <div class="logo">
+                            <a href="http://iky.vn" title="Về trang chủ IKY" target="_self"  >
+                                <h1>Bảng Điều Khiển</h1>
+                                <span>IKY.VN</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                        <!--Notification menu end-->
+                        <div class="profile_details">
+                            <ul>
+                                <li class="dropdown profile_details_drop">
+                                    <a href="#" title="Bấm vào đăng kí thông tin" target="_self" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                        <div class="profile_img">
+                                            <span class="prfil-img"><img src="Images/1.png" alt=""> </span>
+                                            <div class="user-name">
+                                                <p>Đăng Kí Thông Tin</p>
+                                                <span>Administrator</span>
+                                            </div>
+
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </a>
+                                    <ul class="dropdown-menu drp-mnu">
+                                        <li> <a href="dangnhap">Đăng Nhập</a> </li>
+                                        <li> <a href="dangki">Đăng Kí thông tin</a> </li>
+                                        <li> <a href="dangxuat">Đăng Xuất</a> </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="clearfix"> </div>
+                
+
+                <!-- main content start-->
+                <!--footer-->
+                    <div class="footer">
+                        <p>&copy; 2018 Bản Quyền Thuộc Về IKY - Công Ty Cổ Phần Công Nghệ Thông Minh | Design by <a><strong>Sang IKY</strong></a> </p>
+                    </div>
+                <!--//footer-->
+                <!-- Classie -->
+
+                <script src="~/Scripts/Admin/classie.js"></script>
+                <script>
+                    var menuLeft = document.getElementById('cbp-spmenu-s1'),
+                        showLeftPush = document.getElementById('showLeftPush'),
+                        body = document.body;
+
+                    showLeftPush.onclick = function () {
+                        classie.toggle(this, 'active');
+                        classie.toggle(body, 'cbp-spmenu-push-toright');
+                        classie.toggle(menuLeft, 'cbp-spmenu-open');
+                        disableOther('showLeftPush');
+                    };
+
+
+                    function disableOther(button) {
+                        if (button !== 'showLeftPush') {
+                            classie.toggle(showLeftPush, 'disabled');
+                        }
+                    }
+                </script>
+                <!--scrolling js-->
+
+                <script src="~/Scripts/Admin/jquery.nicescroll.js"></script>
+
+                <script src="~/Scripts/Admin/scripts.js"></script>
+                <!--//scrolling js-->
+                <!-- Bootstrap Core JavaScript -->
+
+                <script src="~/Scripts/Admin/bootstrap.js"></script>
+
+</body>
+</html>
